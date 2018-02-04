@@ -1,20 +1,17 @@
 require('dotenv').config();
 var PORT = process.env.PORT;
-
-var express= require('express')
+var express = require('express')
 
 var app = express();
 
-app.listen(3000, function(){
+app.listen(PORT,function(){
 
-console.log('Server is up and running on port 3000');
-
+console.log('Server is up and running on port 3000')
+console.log(`Server is up and running on port ${PORT}`)
 
 });
 
-app.get('/', function(request, response){
+app.get('/',function(request,response){
 
-response.send('Hello World - Hi Allll');
-
-
+	response.send('Hello World - this is the "get endpoint" ')
 });
